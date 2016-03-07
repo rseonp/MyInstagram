@@ -2,7 +2,7 @@
 
 **MyInstagram** is a photo sharing app using Parse as its backend.
 
-Time spent: **6.5** hours spent in total
+Time spent: **7** hours spent in total
 
 ## User Stories
 
@@ -23,12 +23,14 @@ The following **optional** features are implemented:
 - [ ] Display the profile photo with each post
 - [ ] Tapping on a post's username or profile photo goes to that user's profile page
 
+Difficulties:
+I spent a lot of time debugging renaming issues...
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/CAvLG7R.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

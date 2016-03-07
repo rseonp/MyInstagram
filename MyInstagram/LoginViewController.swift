@@ -35,22 +35,27 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignUp(sender: AnyObject) {
-        let newUser = PFUser()
         
-        newUser.username = usernameField.text
-        newUser.password = passwordField.text
-        
-        newUser.signUpInBackgroundWithBlock { (success:Bool, error: NSError?) -> Void in
-            if success {
-                print("created a user")
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
-            } else {
-                print(error?.localizedDescription)
-                if error!.code == 202 {
-                    print("username is taken")
+        if(usernameField.text != "" && passwordField.text != "") {
+            let newUser = PFUser()
+            
+            newUser.username = usernameField.text
+            newUser.password = passwordField.text
+            
+            newUser.signUpInBackgroundWithBlock { (success:Bool, error: NSError?) -> Void in
+                if success {
+                    print("created a user")
+                    self.performSegueWithIdentifier("loginSegue", sender: nil)
+                } else {
+                    print(error?.localizedDescription)
+                    if error!.code == 202 {
+                        print("username is taken")
+                    }
                 }
             }
+            
         }
+        
     }
     /*
     // MARK: - Navigation
